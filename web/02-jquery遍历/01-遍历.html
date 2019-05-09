@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    </script>
+    <script>
+        $(function () {
+                //1.js遍历
+                  var citys = $("#city li");
+//            for(var i=0;i<citys.length;i++)
+//            {
+//                if("上海"==citys[i].innerHTML)
+//                {
+//                    //break;
+//                    //continue;
+//                }
+//                alert(i+":"+citys[i].innerHTML);
+//            }
+
+              //2.jq遍历
+
+                    //2.1.jq对象.each(callback)
+
+//                    citys.each(function (index,element) {
+//                        //获取li对象方法
+//                        //this
+//                      // alert(this.innerHTML);
+//                     //  alert($(this).html());
+//
+//                    //使用参数获取其索引和对象
+//                    //alert(index+":"+element.innerHTML);
+//                        if("上海" == $(element).html())
+//                        {
+//                            //作用==continue;
+//                            //return true;
+//                            //作用==break;
+//                            return false;
+//                        }
+//                        alert(index+":"+$(element).html());
+//                    });
+
+                    //2.2jQuery.each(object, [callback])
+//                        $.each(citys,function (index,element) {
+//                            //获取li对象方法
+//                                //this
+//                            // alert($(this).html());
+//                        // 使用参数获取其索引和对象
+//                            alert(index+":"+element.innerHTML);
+//                        })
+                 //2.3 for....of
+                 for(li of citys)
+                 {
+                     //alert(li.innerHTML);
+                     alert($(li).html());
+                 }
+                });
+    </script>
+</head>
+<body>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>
